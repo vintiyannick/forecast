@@ -111,15 +111,16 @@ fetch('https://geographie.uibk.ac.at/data/ecmwf/data/wind-10u-10v-europe.json')
         const velocityLayer = L.velocityLayer({
             data: data,
             displayValues: true,
+            lineWidth: 2,
             displayOptions: {
-                velocityType: "Global Wind",
-                position: "bottomleft",
-                emptyString: "No velocity data",
+                velocityType: "",
+                position: "bottomright",
+                emptyString: "Keine Winddaten",
                 angleConvention: "bearingCW",
                 showCardinal: false,
-                speedUnit: "ms",
-                directionString: "Direction",
-                speedString: "Speed",
+                speedUnit: "km/h",
+                directionString: "Windrichtung",
+                speedString: "Windgeschwindigkeit",
             },
             maxVelocity: 10,
         });
